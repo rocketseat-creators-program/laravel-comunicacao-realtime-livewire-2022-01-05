@@ -19,22 +19,6 @@
 </head>
 
 <body class="font-sans antialiased">
-    <!--
-          This example requires Tailwind CSS v2.0+
-
-          This example requires some changes to your config:
-
-          ```
-          // tailwind.config.js
-          module.exports = {
-            // ...
-            plugins: [
-              // ...
-              require('@tailwindcss/forms'),
-            ]
-          }
-          ```
-        -->
     <div class="h-screen flex overflow-hidden bg-white">
         <!-- Off-canvas menu for mobile, show/hide based on off-canvas menu state. -->
         <div class="fixed inset-0 flex z-40 lg:hidden" role="dialog" aria-modal="true">
