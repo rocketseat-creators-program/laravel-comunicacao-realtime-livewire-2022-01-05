@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Livewire\Paginas\Tarefas;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,8 +16,11 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [\App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
+Route::group(['middleware' => ['auth']], function () {
+    Route::get('/dashboard', function () {
+        return view('dashboard');
+    })->name('dashboard');
 
+    Route::get('/tarefas', Tarefas::class)->name('tarefas');
+});
 require __DIR__.'/auth.php';
